@@ -75,26 +75,26 @@ const QuizGenerator = () => {
     return (
         <>
             <div className="flex flex-col p-10">
-                <h1 className="text-4xl">Quiz Generation Options</h1>
-                <p className="pt-10">
+                <h1 className="text-4xl" data-test-id="quiz-title">Quiz Generation Options</h1>
+                <p className="pt-10" data-test-id="quiz-description">
                     Please choose your preferences below to generate your personalized
                     quiz.
                 </p>
 
                 <div className="space-y-5">
-                    <h1 className="mt-10 text-gray-500">Topic</h1>
-                    <QuizDropdown data={topics} onSelect={setSelectedTopic}/>
-                    <h1 className="text-gray-500">Expertise</h1>
-                    <QuizDropdown data={difficulty} onSelect={setSelectedDifficulty}/>
+                    <h1 className="mt-10 text-gray-500 ">Topic</h1>
+                    <QuizDropdown data={topics} onSelect={setSelectedTopic}  data-test-id="dropdown-topic" />
+                    <h1 className="text-gray-500 "  data-test-id="dropdown-difficulty" >Expertise</h1>
+                    <QuizDropdown data={difficulty} onSelect={setSelectedDifficulty}   data-test-id="dropdown-difficulty"  />
                     <h1 className="text-gray-500">Number of Questions</h1>
-                    <QuizDropdown data={questionAmount} onSelect={setSelectedQuestions}/>
-                    <h1 className="text-gray-500">Style of questions</h1>
-                    <QuizDropdown data={style} onSelect={setSelectedStyle}/>
+                    <QuizDropdown data={questionAmount} onSelect={setSelectedQuestions}data-test-id="dropdown-questions" />
+                    <h1 className="text-gray-500 ">Style of questions</h1>
+                    <QuizDropdown data={style} onSelect={setSelectedStyle} data-test-id="dropdown-style"/>
                 </div>
 
                 <button
                     className="bg-teal-500 hover:bg-teal-700 text-white px-6 py-2 mt-10 rounded text-center w-fit"
-                    onClick={handleSubmit}
+                    onClick={handleSubmit}  data-test-id="submit-button"
                 >
                     {loading ? "Loading..." : "Submit"}
                 </button>

@@ -7,11 +7,11 @@ import Footer from "../components/Footer.jsx";
 const Layout = () => {
     return (
         <>
-            <Navbar/>
+            <Navbar id="navbar" data-testid="navbar"/>
             <div className="h-full min-h-screen relative">
             <Outlet/>
             </div>
-            <Footer/>
+            <Footer id="footer" data-testid="footer"/>
         </>
     )
 }

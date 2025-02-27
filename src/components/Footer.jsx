@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <>
       {/*footer will go to bottom with more stuff added to page*/}
-      <footer className="h-fit w-full flex justify-center items-center bg-blue-600 text-white p-10">
+      <footer className="h-fit w-full flex justify-center items-center bg-blue-600 text-white p-10" data-test-id="footer">
         <div className="flex justify-between align-top">
           <p className="w-1/2">
             "Embrace the power of our app and unlock the secrets of the

@@ -4,16 +4,17 @@ const Navbar = () => {
     return (
         <>
             {/*basic navbar feel free to mess with it*/}
-            <navbar className='h-32 w-full bg-blue-600 flex justify-center items-center'>
+            <navbar className='h-32 w-full bg-blue-600 flex justify-center items-center' data-testid=
+            "navbar">
                 <ul className='flex w-11/12 justify-between'>
-                    <Link to="/">
+                    <Link to="/" data-test-id="nav-home">
                         <li className='list-none text-white text-5xl'>lrnr</li>
                     </Link>
                     <div className='flex gap-4 md:gap-10 items-center'>
                     <Link to="/account">
                         <li className='hover:underline list-none text-white'>Account</li>
                     </Link>
-                    <Link to="/quizgenerator">
+                    <Link to="/quizgenerator" data-test-id="nav-quiz-generator">
                         <li className='hover:underline list-none text-white'>Quiz Generator</li>
                     </Link>
                     </div>
